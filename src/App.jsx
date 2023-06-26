@@ -23,7 +23,7 @@ function App() {
     <>
       <div className="mx-auto w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[69%] 2xl:w-[60%]">
         <Navbar />
-        <Suspense fallback={<Loader/>}>
+        <Suspense fallback={<Loader />}>
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route element={<HomePage />} path="/" />

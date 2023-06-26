@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-
 export default function Protfolio() {
   const projects = [
     {

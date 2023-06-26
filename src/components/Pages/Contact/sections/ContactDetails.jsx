@@ -22,7 +22,7 @@ export default function ContactDetails() {
         <h1 className="lg:w-1/2 text-5xl mb-8 font-bold">Contact Details</h1>
       </div>
       {informations.map(({ office, mail, address, phone }, i) => (
-        <div key={i} className="grid grid-cols-2 lg:gap-y-8 gap-y-4 mb-14 col-span-1">
+        <div key={i} className="grid lg:gap-y-8 gap-y-4 mb-14 col-span-1">
           <h1 className="font-bold text-lg">{office}</h1>
           {/* contact info */}
           <div className="grid grid-cols-2 gap-y-2 [&>p]:text-black">
