@@ -1,4 +1,4 @@
-import img from "/public/loader.gif"
+import img from "loader.gif"
 
 export default function Loader() {
   return (
