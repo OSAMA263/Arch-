@@ -4,7 +4,7 @@ import MainBtn from "../../../Features/MainBtn";
 export default function FeaturedSection() {
   const cards = [
     {
-      img: "/public/home/featured-img1.jpg",
+      img: "home/featured-img1.jpg",
       number: "1",
       slider: {
         h1: "Project Del So",
@@ -12,7 +12,7 @@ export default function FeaturedSection() {
       },
     },
     {
-      img: "/public/home/featured-img2.jpg",
+      img: "home/featured-img2.jpg",
       number: "2",
       slider: {
         h1: "Le Prototype",
@@ -20,7 +20,7 @@ export default function FeaturedSection() {
       },
     },
     {
-      img: "/public/home/featured-img3.jpg",
+      img: "home/featured-img3.jpg",
       number: "3",
       slider: {
         h1: "228B Tower",
