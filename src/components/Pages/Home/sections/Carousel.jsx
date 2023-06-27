@@ -35,7 +35,7 @@ export default function Carousel({ info, indicators }) {
               key={i}
               className={`${
                 Index === i ? "z-20 opacity-100 delay-700" : "-z-10 opacity-0"
-              } absolute top-1/2 flex h-full -translate-y-1/2 flex-col items-start justify-center font-bold text-white transition-all duration-[1s] ease-in-out`}
+              } absolute top-1/2 flex h-full w-full -translate-y-1/2 flex-col items-start justify-center font-bold text-white transition-all duration-[1s] ease-in-out`}
             >
               <div className="h-[44rem] w-full">
                 <img src={img} className="h-full w-full brightness-50" alt="" />
