@@ -29,7 +29,7 @@ export default function Carousel({ info, indicators }) {
     <>
       <div className="relative mt-12 bg-gray-200 md:mt-24">
         {/* details */}
-        <div className="relative h-[44rem]">
+        <div className="relative h-[44rem] overflow-hidden">
           {info.map(({ img, header, text }, i) => (
             <div
               key={i}
