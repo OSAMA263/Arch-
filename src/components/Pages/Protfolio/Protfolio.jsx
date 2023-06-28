@@ -81,7 +81,7 @@ export default function Protfolio() {
       opacity: 1,
       transition: {
         delay: 0.4,
-        duration: .6,
+        duration: 0.6,
       },
     },
     exit: {
@@ -105,14 +105,14 @@ export default function Protfolio() {
       initial="init"
       animate="animate"
       exit="exit"
-      className="mx-auto my-40 overflow-x-hidden grid w-[90%] gap-4 sm:w-auto sm:grid-cols-2 md:grid-cols-3 lg:gap-6"
+      className="mx-auto my-40 grid w-[90%] gap-4 overflow-x-hidden sm:w-auto sm:grid-cols-2 md:grid-cols-3 lg:gap-6"
     >
       {projects.map(({ img, place, date }, i) => (
         <motion.div
           variants={cards_variants}
           initial="init"
           animate="animate"
-          transition={{ delay: 0.5* i, duration: 0.8 }}
+          transition={{ delay: 0.5 * i, duration: 0.8 }}
           key={i}
           className="relative h-[37vh] overflow-hidden md:h-full [&>img]:hover:scale-110"
         >

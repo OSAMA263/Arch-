@@ -5,7 +5,7 @@ import HomePage from "./components/Pages/Home/Home";
 import Navbar from "./components/Features/Navbar";
 import Footer from "./components/Features/Footer";
 import Loader from "./components/Features/Loader";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const AboutUs = lazy(() => import("./components/Pages/About us/AboutUs"));
 const Protfolio = lazy(() => import("./components/Pages/Protfolio/Protfolio"));
@@ -19,9 +19,26 @@ function App() {
     window.scroll({ top: 0, bottom: 0, behavior: "smooth" });
   }, [location.pathname]);
 
+  const vrainate = {
+    init: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        delay: 0.4,
+        duration: 1,
+      },
+    },
+  };
   return (
     <>
-      <div className="mx-auto w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[69%] 2xl:w-[60%]">
+      <motion.div
+        variants={vrainate}
+        initial="init"
+        animate="animate"
+        className="mx-auto w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[69%] 2xl:w-[60%]"
+      >
         <Navbar />
         <Suspense fallback={<Loader />}>
           <AnimatePresence mode="wait">
@@ -35,7 +52,7 @@ function App() {
         </Suspense>
         <Footer />
         <ScrollTopBtn />
-      </div>
+      </motion.div>
     </>
   );
 }

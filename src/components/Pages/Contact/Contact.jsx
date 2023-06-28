@@ -36,7 +36,7 @@ export default function Contact() {
       <ContactDetails />
       <div className="my-32 flex justify-center">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d817.7826964002752!2d15.944726978412268!3d78.17240918792372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x459c4d3a4c9c22a5%3A0xca0c1ffe6d92c219!2sArctic%20Husky%20Travellers!5e0!3m2!1sen!2seg!4v1687775241316!5m2!1sen!2seg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.8066764930795!2d178.05489017683487!3d-38.699284785166235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d66790cd3c4c247%3A0xb95f65c1e03ea535!2sSponge%20Bay%20Beach!5e0!3m2!1sen!2seg!4v1687862553877!5m2!1sen!2seg"
           width="600"
           height="450"
           loading="lazy"
