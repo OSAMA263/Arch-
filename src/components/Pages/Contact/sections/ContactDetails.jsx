@@ -30,7 +30,7 @@ export default function ContactDetails() {
             <p>Address:</p> <span>{address}</span>
             <p>Phone:</p> <span>{phone}</span>
           </div>
-          <button className="w-fit text-lg font-bold flex items-center gap-x-2 [&>svg]:hover:translate-x-4">view on map <TfiArrowRight className="transition-all duration-500" /></button>
+          <a href="#map" className="w-fit text-lg font-bold flex items-center gap-x-2 [&>svg]:hover:translate-x-4">view on map <TfiArrowRight className="transition-all duration-500" /></a>
         </div>
       ))}
     </div>
