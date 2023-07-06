@@ -15,6 +15,15 @@ export default function ContactDetails() {
       phone: "9876-543-210",
     },
   ];
+  
+  const scrollSmoothTo = (e, elementId) => {
+    e.preventDefault();
+    const element = document.getElementById("map");
+    element.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="my-40 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-12 w-[90%] mx-auto">
@@ -30,7 +39,7 @@ export default function ContactDetails() {
             <p>Address:</p> <span>{address}</span>
             <p>Phone:</p> <span>{phone}</span>
           </div>
-          <a href="#map" className="w-fit text-lg font-bold flex items-center gap-x-2 [&>svg]:hover:translate-x-4">view on map <TfiArrowRight className="transition-all duration-500" /></a>
+          <a href="" onClick={(e) => scrollSmoothTo(e, "map")} className="w-fit text-lg font-bold flex items-center gap-x-2 [&>svg]:hover:translate-x-4">view on map <TfiArrowRight className="transition-all duration-500" /></a>
         </div>
       ))}
     </div>
