@@ -112,7 +112,7 @@ export default function Protfolio() {
           variants={cards_variants}
           initial="init"
           animate="animate"
-          transition={{ delay: 0.5 * i, duration: 0.8 }}
+          transition={{ delay: 0.4 * i, duration: 0.8 }}
           key={i}
           className="relative h-[37vh] overflow-hidden md:h-full [&>img]:hover:scale-110"
         >
