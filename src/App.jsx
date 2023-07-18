@@ -31,13 +31,17 @@ function App() {
       },
     },
   };
+
+  const styles =
+    "mx-auto w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[69%] 2xl:w-[60%]";
+
   return (
     <>
       <motion.div
         variants={vrainate}
         initial="init"
         animate="animate"
-        className="mx-auto w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[69%] 2xl:w-[60%]"
+        className={styles}
       >
         <Navbar />
         <Suspense fallback={<Loader />}>

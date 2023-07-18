@@ -8,3 +8,7 @@ h1 {
 p {
   color: #5d545b;
 }
+svg,
+a {
+  transition: all 500ms linear;
+}

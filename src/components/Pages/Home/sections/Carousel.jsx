@@ -8,87 +8,18 @@ export default function Carousel({ info, indicators }) {
     setIndex(i);
   };
 
-  const parent_variants = {
-    init: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-    },
-    exit: {
-      opacity: 0,
-    },
-  };
-
-  const h1_variants = {
-    init: {
-      y: -100,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        stiffness: 70,
-        type: "spring",
-      },
-    },
-    exit: {
-      y: -100,
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const btn_variants = {
-    init: {
-      x: -100,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        stiffness: 70,
-        type: "spring",
-      },
-    },
-    exit: {
-      x: -100,
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const p_variants = {
-    init: {
-      scale: 1.1,
-      opacity: 0,
-    },
-    animate: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        stiffness: 70,
-        type: "spring",
-      },
-    },
-    exit: {
-      scale: 1.1,
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
+  const styles = {
+    parent:
+      "flex flex-col items-start justify-center h-full font-bold text-white",
+    text_wrapper:
+      "absolute me-[5%] ms-[5%] flex w-[90%] flex-col items-start gap-y-12 sm:gap-y-6 md:me-0 md:ms-[14vw] md:w-[48%]",
+    indicators_wrapper:
+      "absolute bottom-0 left-1/2 z-[69] flex -translate-x-1/2 translate-y-full sm:left-0 sm:translate-x-0 sm:translate-y-0 lg:-left-[5.2rem]",
   };
 
   return (
     <>
-      <div className="relative mt-12 bg-gray-200 md:mt-24">
+      <section className="relative mt-12 bg-gray-200 md:mt-24">
         {/* details */}
         <AnimatePresence mode="wait">
           {/* parent div */}
@@ -98,7 +29,7 @@ export default function Carousel({ info, indicators }) {
             animate="animate"
             exit="exit"
             key={info[Index].img}
-            className="flex h-full flex-col items-start justify-center font-bold text-white"
+            className={styles.parent}
           >
             <div className="h-[44rem] w-full">
               <motion.img
@@ -106,11 +37,11 @@ export default function Carousel({ info, indicators }) {
                 animate="animate"
                 exit="exit"
                 src={info[Index].img}
-                className="h-full w-full brightness-50"
+                className="w-full h-full brightness-50"
               />
             </div>
             {/* text */}
-            <div className="absolute me-[5%] ms-[5%] flex w-[90%] flex-col items-start gap-y-12 sm:gap-y-6 md:me-0 md:ms-[14vw] md:w-[48%]">
+            <div className={styles.text_wrapper}>
               <motion.h1
                 variants={h1_variants}
                 initial="init"
@@ -137,7 +68,7 @@ export default function Carousel({ info, indicators }) {
                 initial="init"
                 animate="animate"
                 exit="exit"
-                className="transition-color border-0"
+                className="border-0 transition-color"
               >
                 <MainBtn text="See Our Protfolio" link="/protfolio" />
               </motion.button>
@@ -146,7 +77,7 @@ export default function Carousel({ info, indicators }) {
         </AnimatePresence>
 
         {/* indicators */}
-        <div className="absolute bottom-0 left-1/2 z-[69] flex -translate-x-1/2 translate-y-full sm:left-0 sm:translate-x-0 sm:translate-y-0 lg:-left-[5.2rem]">
+        <div className={styles.indicators_wrapper}>
           {indicators.map((text, i) => (
             <button
               onClick={() => {
@@ -165,7 +96,86 @@ export default function Carousel({ info, indicators }) {
             </button>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 }
+
+
+const parent_variants = {
+  init: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
+const h1_variants = {
+  init: {
+    y: -100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      stiffness: 70,
+      type: "spring",
+    },
+  },
+  exit: {
+    y: -100,
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const btn_variants = {
+  init: {
+    x: -100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      stiffness: 70,
+      type: "spring",
+    },
+  },
+  exit: {
+    x: -100,
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const p_variants = {
+  init: {
+    scale: 1.1,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      stiffness: 70,
+      type: "spring",
+    },
+  },
+  exit: {
+    scale: 1.1,
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
