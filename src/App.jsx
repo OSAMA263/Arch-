@@ -33,7 +33,7 @@ function App() {
   };
 
   const styles =
-    "mx-auto w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[69%] 2xl:w-[60%]";
+    "mx-auto flex flex-col h-full w-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[69%] 2xl:w-[60%]";
 
   return (
     <>
