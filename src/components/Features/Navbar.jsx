@@ -24,7 +24,7 @@ export default function Navbar() {
       Toggle ? "left-1/2 -translate-x-1/2" : "left-0 -translate-x-[200%]"
     } absolute top-full z-[69] mx-auto w-[60%] bg-white py-12 text-center transition-all duration-500 sm:w-[80%] md:static md:ml-24 md:flex md:w-auto md:translate-x-0 md:py-0 md:text-start`,
 
-    ul: "hover: flex flex-col gap-x-8 gap-y-2 md:flex-row md:gap-y-0 [&>a.active]:text-[#a5afb9] [&>a.active]:after:w-full [&>a:hover]:text-[#838386] [&>a]:relative [&>a]:text-xl [&>a]:font-bold after:[&>a]:absolute after:[&>a]:right-0 after:[&>a]:block after:[&>a]:w-0 after:[&>a]:rounded-2xl after:[&>a]:bg-black after:[&>a]:transition-all after:[&>a]:duration-700 hover:after:[&>a]:left-0 hover:after:[&>a]:w-full md:after:[&>a]:h-[2px]",
+    ul: "hover: flex flex-col gap-x-8 gap-y-2 md:flex-row md:gap-y-0 [&_a.active]:text-[#a5afb9] [&_a.active]:after:w-full [&_a:hover]:text-[#838386] [&_a]:relative [&_a]:text-xl [&_a]:font-bold after:[&_a]:absolute after:[&_a]:right-0 after:[&_a]:block after:[&_a]:w-0 after:[&_a]:rounded-2xl after:[&_a]:bg-black after:[&_a]:transition-all after:[&_a]:duration-700 hover:after:[&_a]:left-0 hover:after:[&_a]:w-full md:after:[&_a]:h-[2px]",
   };
 
   return (
@@ -32,10 +32,11 @@ export default function Navbar() {
       <nav className={styles.nav}>
         <div className="flex items-center justify-between">
           <NavLink to="/">
-            <img src="dark-logo.svg" alt="" />
+            <img src="dark-logo.svg" alt="logo" />
           </NavLink>
           {/* toggle btn */}
           <button
+            aria-label="menu"
             onClick={() => setToggle((prev) => !prev)}
             className={styles.expand_navlinks_btn}
           >
@@ -46,9 +47,15 @@ export default function Navbar() {
         {/* navbar links */}
         <div className={styles.links_wrapper}>
           <ul className={styles.ul}>
-            <NavLink to="/protfolio">Protfolio</NavLink>
-            <NavLink to="/about-us">About Us</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <li>
+              <NavLink to="/protfolio">Protfolio</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about-us">About Us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
           </ul>
         </div>
       </nav>

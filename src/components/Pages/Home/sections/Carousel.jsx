@@ -28,17 +28,21 @@ export default function Carousel({ info, indicators }) {
             initial="init"
             animate="animate"
             exit="exit"
-            key={info[Index].img}
+            key={info[Index].pc_img}
             className={styles.parent}
           >
             <div className="h-[44rem] w-full">
-              <motion.img
-                initial="init"
-                animate="animate"
-                exit="exit"
-                src={info[Index].img}
-                className="w-full h-full brightness-50"
-              />
+              <picture>
+                <source srcSet={info[Index].mobile_img} media="(max-width:640px)" />
+                <motion.img
+                  initial="init"
+                  animate="animate"
+                  exit="exit"
+                  alt={"img" + info[Index]}
+                  src={info[Index].pc_img}
+                  className="w-full h-full brightness-50"
+                />
+              </picture>
             </div>
             {/* text */}
             <div className={styles.text_wrapper}>
@@ -100,7 +104,6 @@ export default function Carousel({ info, indicators }) {
     </>
   );
 }
-
 
 const parent_variants = {
   init: {

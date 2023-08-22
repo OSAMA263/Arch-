@@ -6,8 +6,8 @@ const classes="transition-color flex items-center justify-center gap-4 rounded-s
 
 
   return (
-    <NavLink to={link} className={classes}>
-      {text} <TfiArrowRight/>
+    <NavLink to={link} aria-label="home" className={classes}>
+      <h1 className="text-sm text-white sm:text-xl">{text}</h1> <TfiArrowRight/>
     </NavLink>
   );
 }

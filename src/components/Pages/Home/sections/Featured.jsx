@@ -29,7 +29,7 @@ export default function FeaturedSection() {
         <div className={styles.cards_wrapper}>
           {cards.map(({ img, number, slider }, i) => (
             <div key={i} className={styles.card}>
-              <img loading="lazy" src={img} alt="" className={styles.img} />
+              <img loading="lazy" src={img} alt={"img"+i} className={styles.img} />
               <h1 className={styles.number}>{number}</h1>
               {/* slider */}
               <div className={styles.slider}>
@@ -58,7 +58,7 @@ export default function FeaturedSection() {
 
 const cards = [
   {
-    img: "home/featured-img1.jpg",
+    img: "home/featured-img1.webp",
     number: "1",
     slider: {
       h1: "Project Del So",
@@ -66,7 +66,7 @@ const cards = [
     },
   },
   {
-    img: "home/featured-img2.jpg",
+    img: "home/featured-img2.webp",
     number: "2",
     slider: {
       h1: "Le Prototype",
@@ -74,7 +74,7 @@ const cards = [
     },
   },
   {
-    img: "home/featured-img3.jpg",
+    img: "home/featured-img3.webp",
     number: "3",
     slider: {
       h1: "228B Tower",

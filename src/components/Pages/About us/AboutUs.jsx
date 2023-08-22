@@ -30,7 +30,7 @@ export default function AboutUs() {
         className="mx-auto"
       >
         <About_Contact_Section
-          img="about/hero-img.jpg"
+          img="about/hero-img.webp"
           header="About"
           text="Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings."
           title="Your team of professionals"

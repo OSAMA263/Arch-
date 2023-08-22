@@ -1,7 +1,6 @@
 import MainBtn from "../../../Features/MainBtn";
 
 export default function AboutSection() {
-  
   const styles = {
     section: "relative my-24 md:w-auto w-[90%] mx-auto",
     content_wrapper:
@@ -16,7 +15,17 @@ export default function AboutSection() {
       {/* img */}
       <div className={styles.content_wrapper}>
         <div className="w-full h-full ">
-          <img src="home/small-team-img.jpg" className={styles.img} alt="" />
+          <picture>
+            <source
+              srcSet="home/mobile/small-team-img.bak.webp"
+              media="(max-width:640px)"
+            />
+            <img
+              src="home/pc/small-team-img.bak.webp"
+              className={styles.img}
+              alt="small-team"
+            />
+          </picture>
         </div>
         {/* text */}
         <div className={styles.text_wrapper}>

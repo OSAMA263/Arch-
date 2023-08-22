@@ -21,9 +21,9 @@ export default function Heritage() {
         {/* image */}
         <div className="hidden w-full h-full md:block">
           <img
-            src="about/heritage-img.jpg"
+            src="about/heritage-img.webp"
             className="object-cover w-full h-full"
-            alt=""
+            alt="heritage"
           />
         </div>
       </div>

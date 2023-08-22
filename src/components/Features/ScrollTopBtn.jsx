@@ -18,7 +18,11 @@ export default function ScrollTopBtn() {
 
   return (
     <>
-      <button className={classes} onClick={scrollHandler}>
+      <button
+        className={classes}
+        aria-label="scroll top"
+        onClick={scrollHandler}
+      >
         <AiOutlineArrowUp />
       </button>
     </>

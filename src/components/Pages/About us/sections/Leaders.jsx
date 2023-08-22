@@ -1,5 +1,5 @@
-import male from "/public/about/employee-male.png";
-import female from "/public/about/employee-female.png";
+import male from "/public/about/employee-male.webp";
+import female from "/public/about/employee-female.webp";
 import { AiFillTwitterSquare, AiFillLinkedin } from "react-icons/ai";
 
 export default function Leaders() {
@@ -40,7 +40,7 @@ export default function Leaders() {
                     className={`${styles.logo_contact_PC}  hover:bg-[#0a66c2]`}
                   />
                 </div>
-                <img src={img} alt="" className="bg-gray-200 " />
+                <img src={img} alt={position+" image"} className="bg-gray-200 " />
               </div>
               <p className="text-lg font-bold">{name}</p>
               <p className="text-lg">{position}</p>
