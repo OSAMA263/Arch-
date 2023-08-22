@@ -28,7 +28,7 @@ export default function Footer() {
           </li>
           <li>
             <div className="absolute bottom-0 right-1/2 w-[80%] translate-x-1/2 md:-right-1/2 md:bottom-1/2 md:w-auto md:translate-x-0 md:translate-y-1/2">
-              <MainBtn text="See Our Protfolio" link="/protfolio" />
+              <MainBtn name="home0" text="See Our Protfolio" link="/protfolio" />
             </div>
           </li>
         </ul>

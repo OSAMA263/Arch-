@@ -32,7 +32,7 @@ export default function AboutSection() {
           <h1 className="text-5xl text-white lg:text-7xl">
             Small team, big ideas
           </h1>
-          <MainBtn text="About Us " link="/about-us" />
+          <MainBtn text="About Us" name="about page" link="/about-us" />
         </div>
       </div>
     </section>

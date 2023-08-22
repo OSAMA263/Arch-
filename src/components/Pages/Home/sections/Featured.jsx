@@ -23,7 +23,7 @@ export default function FeaturedSection() {
         {/* header */}
         <div className="flex justify-between mb-16 font-bold">
           <h1 className="text-5xl">Featured</h1>
-          <MainBtn text="See All" link="/protfolio" />
+          <MainBtn name="protfolio page." text="See All" link="/protfolio" />
         </div>
         {/* Projects in cards */}
         <div className={styles.cards_wrapper}>

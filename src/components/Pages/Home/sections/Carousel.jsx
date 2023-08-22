@@ -74,7 +74,7 @@ export default function Carousel({ info, indicators }) {
                 exit="exit"
                 className="border-0 transition-color"
               >
-                <MainBtn text="See Our Protfolio" link="/protfolio" />
+                <MainBtn name="protfolio page" text="See Our Protfolio" link="/protfolio" />
               </motion.button>
             </div>
           </motion.div>
