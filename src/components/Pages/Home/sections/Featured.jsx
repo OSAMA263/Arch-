@@ -9,7 +9,7 @@ export default function FeaturedSection() {
     card: "relative overflow-hidden rounded-sm [&>div]:hover:-translate-y-full [&>div]:hover:bg-[#33404e] [&>h1]:hover:opacity-0 [&>img]:hover:brightness-50 ",
     img: "w-full md:h-full h-[25vh] transition-all duration-700 object-cover",
     number:
-      "translate-x-1/5 absolute -right-2 top-0 -translate-y-[40%] text-[11rem] font-bold text-[#8dbec46c] transition-all duration-700",
+      "translate-x-1/5 absolute -right-2 top-0 -translate-y-[40%] text-[11rem] font-bold text-[#8dbec4b7] transition-all duration-700",
     slider:
       "absolute flex h-full w-full translate-y-0 flex-col items-center justify-center gap-y-6 overflow-hidden rounded-sm bg-[#33404e38] text-white transition-all duration-700",
     slider_link:

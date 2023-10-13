@@ -1,9 +1,8 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import MainBtn from "../../../Features/MainBtn";
 export default function Carousel({ info, indicators }) {
   const [Index, setIndex] = useState(0);
-
   const carouselHandler = (i) => {
     setIndex(i);
   };
@@ -33,14 +32,17 @@ export default function Carousel({ info, indicators }) {
           >
             <div className="h-[44rem] w-full">
               <picture>
-                <source srcSet={info[Index].mobile_img} media="(max-width:640px)" />
+                <source
+                  srcSet={info[Index].mobile_img}
+                  media="(max-width:640px)"
+                />
                 <motion.img
                   initial="init"
                   animate="animate"
                   exit="exit"
                   alt={"img" + info[Index]}
                   src={info[Index].pc_img}
-                  className="w-full h-full brightness-50"
+                  className="h-full w-full brightness-50"
                 />
               </picture>
             </div>
@@ -72,9 +74,13 @@ export default function Carousel({ info, indicators }) {
                 initial="init"
                 animate="animate"
                 exit="exit"
-                className="border-0 transition-color"
+                className="transition-color border-0"
               >
-                <MainBtn name="protfolio page" text="See Our Protfolio" link="/protfolio" />
+                <MainBtn
+                  name="protfolio page"
+                  text="See Our Portfolio"
+                  link="/protfolio"
+                />
               </motion.button>
             </div>
           </motion.div>
@@ -90,10 +96,10 @@ export default function Carousel({ info, indicators }) {
                 // control.set("exit");
               }}
               key={i}
-              className={`border-y border-l p-4 font-bold transition-colors duration-700 sm:p-8 ${
+              className={`border-y border-l border-transparent p-4 font-bold transition-colors duration-700 sm:p-8 ${
                 Index === i
                   ? "border-[#191a1f] bg-[#191a1f] text-white hover:bg-[#191a1f]"
-                  : "bg-white hover:bg-gray-200 "
+                  : "bg-white hover:bg-gray-400 "
               }`}
             >
               {text}

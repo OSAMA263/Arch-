@@ -1,7 +1,7 @@
 export default function Welcome() {
   const styles = {
     welcome:
-      "absolute -top-[8%] -translate-y-1/2 lg:text-[9vw] sm:text-8xl text-7xl font-extrabold text-sky-100 left-1/2 -translate-x-1/2",
+      "absolute -top-[8%] -translate-y-1/2 lg:text-[9vw] sm:text-8xl text-7xl font-extrabold text-[#a7b3caa1] left-1/2 -translate-x-1/2",
     content_wrapper:
       "grid justify-center pt-4 overflow-hidden md:grid-cols-2 rounded-r-2xl lg:justify-end",
     text_wrapper: "flex flex-col justify-end px-4 gap-y-6 lg:px-14",

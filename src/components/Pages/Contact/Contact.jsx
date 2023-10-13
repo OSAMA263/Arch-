@@ -1,6 +1,7 @@
 import About_Contact_Section from "../../Features/About_Contact_Section";
 import ContactDetails from "./sections/ContactDetails";
 import { motion } from "framer-motion";
+import Form from "./sections/Form";
 
 export default function Contact() {
   const vrainate = {
@@ -41,6 +42,7 @@ export default function Contact() {
           loading="lazy"
         ></iframe>
       </section>
+      <Form/>
     </motion.section>
   );
 }

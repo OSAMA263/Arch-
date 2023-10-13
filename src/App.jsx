@@ -49,7 +49,7 @@ function App() {
             <Routes location={location} key={location.pathname}>
               <Route element={<HomePage />} path="/" />
               <Route element={<AboutUs />} path="/about-us" />
-              <Route element={<Protfolio />} path="/protfolio" />
+              <Route element={<Protfolio />} path="/portfolio" />
               <Route element={<Contact />} path="/contact" />
             </Routes>
           </AnimatePresence>

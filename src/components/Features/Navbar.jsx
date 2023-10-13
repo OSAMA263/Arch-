@@ -12,8 +12,9 @@ export default function Navbar() {
   }, [pathname]);
 
   const styles = {
-    nav: "relative mx-auto mt-6 w-[95%] items-end md:mt-12 md:flex",
-
+    nav: "fixed top-0 left-0 w-screen bg-white z-[6969]",
+    header:
+      "flex items-center mx-auto border-b border-gray-400 py-4 sm:py-10  w-[80%] sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[69%] 2xl:w-[60%]",
     expand_navlinks_btn: `${
       Toggle
         ? "[&>#close]:rotate-0 [&>#close]:opacity-100"
@@ -30,34 +31,36 @@ export default function Navbar() {
   return (
     <>
       <nav className={styles.nav}>
-        <div className="flex items-center justify-between">
-          <NavLink to="/">
-            <img src="dark-logo.svg" alt="logo" />
-          </NavLink>
-          {/* toggle btn */}
-          <button
-            aria-label="menu"
-            onClick={() => setToggle((prev) => !prev)}
-            className={styles.expand_navlinks_btn}
-          >
-            <RiCloseFill id="close" />
-            <RiMenuLine id="open" />
-          </button>
-        </div>
-        {/* navbar links */}
-        <div className={styles.links_wrapper}>
-          <ul className={styles.ul}>
-            <li>
-              <NavLink to="/protfolio">Protfolio</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about-us">About Us</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
-          </ul>
-        </div>
+        <header className={styles.header}>
+          <div className="justify-between flex w-full md:w-fit ">
+            <NavLink to="/">
+              <img src="dark-logo.svg" alt="logo" />
+            </NavLink>
+            {/* toggle btn */}
+            <button
+              aria-label="menu"
+              onClick={() => setToggle((prev) => !prev)}
+              className={styles.expand_navlinks_btn}
+            >
+              <RiCloseFill id="close" />
+              <RiMenuLine id="open" />
+            </button>
+          </div>
+          {/* navbar links */}
+          <div className={styles.links_wrapper}>
+            <ul className={styles.ul}>
+              <li>
+                <NavLink to="/portfolio">Portfolio</NavLink>
+              </li>
+              <li>
+                <NavLink to="/about-us">About Us</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">Contact</NavLink>
+              </li>
+            </ul>
+          </div>
+        </header>
       </nav>
     </>
   );
