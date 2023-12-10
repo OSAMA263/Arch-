@@ -79,7 +79,7 @@ export default function Carousel({ info, indicators }) {
                 <MainBtn
                   name="protfolio page"
                   text="See Our Portfolio"
-                  link="/protfolio"
+                  link="/portfolio"
                 />
               </motion.button>
             </div>
